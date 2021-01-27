@@ -27,7 +27,7 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.post('http://192.168.1.64:8000/poc/', {
+    axios.post(`http://${window.location.hostname}:8000/poc/`, {
       a: valA,
       b: valB,
     })
