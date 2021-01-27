@@ -5,8 +5,5 @@ class Index(views.APIView):
     def post(self, request):
         a = int(request.data['a'])
         b = int(request.data['b'])
-        res = []
-
-        for i in range(11):
-            res.append({'x': i, 'y': octave.calc(a, b, i)})
+        res = [{'x': i, 'y': octave.calc(a, b, i)} for i in range(10)]
         return response.Response(res)
