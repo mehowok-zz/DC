@@ -27,7 +27,7 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.post(`http://${window.location.hostname}:8000/poc/`, {
+    axios.post(`https://poc4delftcircuits-be.sandbox.stxnext.pl/poc/`, {
       a: valA,
       b: valB,
     })
