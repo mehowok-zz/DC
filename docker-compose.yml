@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  backend:
+    container_name: backend
+    build: .
+    volumes:
+      - ./backend:/usr/local/src
+    image: backend:dev  
+    command: python3 manage.py runserver 0.0.0.0:8000
+    ports:
+      - 8000:8000
